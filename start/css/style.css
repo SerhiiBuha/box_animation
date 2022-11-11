@@ -1,0 +1,43 @@
+@keyframes animation-div-move {
+
+    0% {
+        transform: translateX(300);
+    }
+    
+    25% {
+        transform: translate(300px);
+    }
+    
+    50% {
+    transform: translate3d(300px, 300px, 0px);
+    }
+    75% {
+        transform: translate3d(0px, 300px, 0px);;
+    }
+
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.div-container {
+    height: 400px;
+    width: 400px;
+    background-color: rgba(255, 0, 0, 0.247);
+}
+
+.div-move {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    z-index: 1;
+    animation: animation-div-move 10s infinite linear;
+}
